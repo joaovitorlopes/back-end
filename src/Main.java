@@ -18,5 +18,9 @@ public class Main {
             Release year: %d
             """.formatted(filmName, evaluation, releaseYear);
         System.out.println(synopsis);
+
+        int classification;
+        classification = (int) (media / 2); // Casting explicit integer
+        System.out.println(classification);
     }
 }
