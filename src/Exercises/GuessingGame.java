@@ -6,8 +6,7 @@ import java.util.Scanner;
 public class GuessingGame {
     public static void main(String[] args) {
         Scanner reading = new Scanner(System.in);
-        //int randomNum = new Random().nextInt(100);
-        int randomNum = 5;
+        int randomNum = new Random().nextInt(100);
         int attempts = 0;
         int number = 0;
 
