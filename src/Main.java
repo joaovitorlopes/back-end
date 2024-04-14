@@ -5,7 +5,14 @@ public class Main {
         myMovie.releaseYear = 2024;
         myMovie.durationInMinutes = 166;
 
-        System.out.println(myMovie.name);
-        System.out.println(myMovie.durationInMinutes);
+        myMovie.displaysTechnicalSheet();
+
+        myMovie.evaluate(8);
+        myMovie.evaluate(5);
+        myMovie.evaluate(10);
+
+        System.out.printf("Sum of ratings: %.2f%n",myMovie.sumOfRatings);
+        System.out.printf("Rating average: %.2f%n", myMovie.getAverageRating());
+        System.out.printf("Total rating: %d%n",myMovie.totalRating);
     }
 }
