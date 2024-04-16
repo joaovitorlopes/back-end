@@ -1,9 +1,11 @@
+import joaovitorlopes.com.github.models.Movie;
+
 public class Main {
     public static void main(String[] args) {
         Movie myMovie = new Movie(); // Instance of the Object
-        myMovie.name = "Duna 2";
-        myMovie.releaseYear = 2024;
-        myMovie.durationInMinutes = 166;
+        myMovie.setName("Duna 2");
+        myMovie.setReleaseYear(2024);
+        myMovie.setDurationInMinutes(166);
 
         myMovie.displaysTechnicalSheet();
 
