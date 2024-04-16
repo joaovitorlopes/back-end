@@ -3,9 +3,13 @@ public class Movie {
     String synopsis;
     int durationInMinutes;
     int releaseYear;
-    int totalRating;
+    private int totalRating;
     boolean isIncluded;
-    double sumOfRatings;
+    private double sumOfRatings;
+
+    int getTotalRating() {
+        return totalRating;
+    }
 
     // method without return (void)
     void displaysTechnicalSheet() {

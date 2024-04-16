@@ -11,8 +11,7 @@ public class Main {
         myMovie.evaluate(5);
         myMovie.evaluate(10);
 
-        System.out.printf("Sum of ratings: %.2f%n",myMovie.sumOfRatings);
         System.out.printf("Rating average: %.2f%n", myMovie.getAverageRating());
-        System.out.printf("Total rating: %d%n",myMovie.totalRating);
+        System.out.printf("Total rating: %d%n",myMovie.getTotalRating());
     }
 }
