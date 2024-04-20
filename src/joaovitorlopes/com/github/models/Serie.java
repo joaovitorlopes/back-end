@@ -37,4 +37,20 @@ public class Serie extends Title {
     public void setMinutesPerEpisode(int minutesPerEpisode) {
         this.minutesPerEpisode = minutesPerEpisode;
     }
+
+    // Overriding the original method
+    @Override
+    public int getDurationInMinutes() {
+        return seasons * episodesPerSeasons * minutesPerEpisode;
+    }
+
+    @Override
+    public void getInfoAbout() {
+        System.out.printf("Name: %s%n",getName());
+        System.out.printf("Release year: %d%n",getReleaseYear());
+        System.out.printf("Seasons: %d%n", getSeasons());
+        System.out.printf("Episode per season: %d%n", getEpisodesPerSeasons());
+        System.out.printf("Minutes per episode: %d%n", getMinutesPerEpisode());
+        System.out.printf("Duration in minutes: %d min%n", getDurationInMinutes());
+    }
 }

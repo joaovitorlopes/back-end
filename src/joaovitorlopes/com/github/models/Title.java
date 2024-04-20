@@ -49,10 +49,10 @@ public class Title {
     }
 
     // method without return (void)
-    public void displaysTechnicalSheet() {
-        System.out.printf("Name of movie: %s%n",name);
-        System.out.printf("Release year: %d%n",releaseYear);
-        System.out.printf("Duration in minutes: %d min%n", durationInMinutes);
+    public void getInfoAbout() {
+        System.out.printf("Name: %s%n",getName());
+        System.out.printf("Release year: %d%n",getReleaseYear());
+        System.out.printf("Duration in minutes: %d min%n", getDurationInMinutes());
     }
     // method without return (void)
     public void evaluate(double grade) {
