@@ -1,3 +1,4 @@
+import joaovitorlopes.com.github.calculations.TimeCalculator;
 import joaovitorlopes.com.github.models.Movie;
 import joaovitorlopes.com.github.models.Serie;
 
@@ -25,5 +26,19 @@ public class Main {
         mySerie.setEpisodesPerSeasons(8);
         mySerie.setMinutesPerEpisode(59);
         mySerie.getInfoAbout();
+
+        System.out.println("------------");
+
+        Movie m1 = new Movie();
+        m1.setName("Duna 1");
+        m1.setReleaseYear(2021);
+        m1.setDurationInMinutes(155);
+
+        TimeCalculator calculator = new TimeCalculator();
+        calculator.include(myMovie);
+        calculator.include(m1);
+        calculator.include(mySerie);
+        System.out.println(calculator.getTotalTime());
+
     }
 }
