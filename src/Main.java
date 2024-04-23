@@ -1,4 +1,6 @@
+import joaovitorlopes.com.github.calculations.RecommendationFilter;
 import joaovitorlopes.com.github.calculations.TimeCalculator;
+import joaovitorlopes.com.github.models.Episode;
 import joaovitorlopes.com.github.models.Movie;
 import joaovitorlopes.com.github.models.Serie;
 
@@ -40,5 +42,14 @@ public class Main {
         calculator.include(mySerie);
         System.out.println(calculator.getTotalTime());
 
+        RecommendationFilter recommendationFilter = new RecommendationFilter();
+        recommendationFilter.filter(myMovie);
+
+        Episode episode = new Episode();
+        episode.setNum(1);
+        episode.setSerie(mySerie);
+        episode.setTotalViews(300);
+
+        recommendationFilter.filter(episode);
     }
 }

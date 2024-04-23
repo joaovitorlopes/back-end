@@ -1,6 +1,8 @@
 package joaovitorlopes.com.github.models;
 
-public class Movie extends Title {
+import joaovitorlopes.com.github.calculations.Sortable;
+
+public class Movie extends Title implements Sortable {
     private String director;
 
     public String getDirector() {
@@ -9,5 +11,10 @@ public class Movie extends Title {
 
     public void setDirector(String director) {
         this.director = director;
+    }
+
+    @Override
+    public int getRating() {
+        return  (int) getAverageRating()  / 2;
     }
 }
