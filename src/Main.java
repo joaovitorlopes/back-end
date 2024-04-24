@@ -4,6 +4,8 @@ import joaovitorlopes.com.github.models.Episode;
 import joaovitorlopes.com.github.models.Movie;
 import joaovitorlopes.com.github.models.Serie;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         Movie myMovie = new Movie(); // Instance of the Object
@@ -51,5 +53,21 @@ public class Main {
         episode.setTotalViews(300);
 
         recommendationFilter.filter(episode);
+
+        Movie otherMovie = new Movie();
+        otherMovie.setName("A Casa de Cera");
+        otherMovie.setReleaseYear(2005);
+        otherMovie.setDurationInMinutes(113);
+        otherMovie.evaluate(10);
+
+        ArrayList<Movie> movieList = new ArrayList<>();
+        movieList.add(m1);
+        movieList.add(myMovie);
+        movieList.add(otherMovie);
+
+        System.out.printf("List length: %d%n", movieList.size());
+        System.out.printf("First movie: %s%n", movieList.get(0).getName());
+        System.out.println(movieList);
+        System.out.printf("toString of Movie: %s%n", movieList.get(0).toString());
     }
 }
