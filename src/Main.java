@@ -8,8 +8,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Movie myMovie = new Movie(); // Instance of the Object
-        myMovie.setName("Duna 2");
+        Movie myMovie = new Movie("Duna 2"); // Instance of the Object
         myMovie.setReleaseYear(2024);
         myMovie.setDurationInMinutes(166);
 
@@ -33,8 +32,7 @@ public class Main {
 
         System.out.println("------------");
 
-        Movie m1 = new Movie();
-        m1.setName("Duna 1");
+        Movie m1 = new Movie("Duna 1");
         m1.setReleaseYear(2021);
         m1.setDurationInMinutes(155);
 
@@ -54,8 +52,7 @@ public class Main {
 
         recommendationFilter.filter(episode);
 
-        Movie otherMovie = new Movie();
-        otherMovie.setName("A Casa de Cera");
+        Movie otherMovie = new Movie("A Casa de Cera");
         otherMovie.setReleaseYear(2005);
         otherMovie.setDurationInMinutes(113);
         otherMovie.evaluate(10);

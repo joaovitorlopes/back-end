@@ -5,6 +5,10 @@ import joaovitorlopes.com.github.calculations.Sortable;
 public class Movie extends Title implements Sortable {
     private String director;
 
+    public Movie(String name) {
+        this.setName(name);
+    }
+
     public String getDirector() {
         return director;
     }
