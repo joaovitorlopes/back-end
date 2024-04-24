@@ -1,3 +1,5 @@
+package joaovitorlopes.com.github.main;
+
 import joaovitorlopes.com.github.calculations.RecommendationFilter;
 import joaovitorlopes.com.github.calculations.TimeCalculator;
 import joaovitorlopes.com.github.models.Episode;
