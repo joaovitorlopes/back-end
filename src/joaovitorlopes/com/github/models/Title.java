@@ -1,6 +1,6 @@
 package joaovitorlopes.com.github.models;
 
-public class Title {
+public class Title implements Comparable<Title>{
     private String name;
     private int releaseYear;
     private int durationInMinutes;
@@ -63,5 +63,10 @@ public class Title {
     public void evaluate(double grade) {
         sumOfRatings += grade;
         totalRating++;
+    }
+
+    @Override
+    public int compareTo(Title otherTitle) {
+        return this.getName().compareTo(otherTitle.getName());
     }
 }

@@ -5,6 +5,7 @@ import joaovitorlopes.com.github.models.Serie;
 import joaovitorlopes.com.github.models.Title;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class MainList {
     public static void main(String[] args) {
@@ -28,5 +29,18 @@ public class MainList {
                 System.out.printf("Rating: %d%n",movie.getRating());
             }
         }
+
+        Collections.sort(list);
+        System.out.println("Movies after sort:");
+        System.out.println(list);
+
+        ArrayList<String> searchByArtist = new ArrayList<>();
+        searchByArtist.add("Ella Purnell");
+        searchByArtist.add("Austin Butler");
+        searchByArtist.add("Zendaya");
+
+        System.out.println("Before sort: " +searchByArtist);
+        Collections.sort(searchByArtist);
+        System.out.println("After sort: " +searchByArtist);
     }
 }
