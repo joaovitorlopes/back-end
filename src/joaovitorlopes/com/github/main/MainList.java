@@ -6,6 +6,7 @@ import joaovitorlopes.com.github.models.Title;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class MainList {
     public static void main(String[] args) {
@@ -31,7 +32,11 @@ public class MainList {
         }
 
         Collections.sort(list);
-        System.out.println("Movies after sort:");
+        System.out.println("Movies and Series after sort:");
+        System.out.println(list);
+
+        list.sort(Comparator.comparing(Title::getReleaseYear));
+        System.out.println("Sorting by release year:");
         System.out.println(list);
 
         ArrayList<String> searchByArtist = new ArrayList<>();

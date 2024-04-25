@@ -57,4 +57,9 @@ public class Serie extends Title {
         System.out.printf("Minutes per episode: %d%n", getMinutesPerEpisode());
         System.out.printf("Duration in minutes: %d min%n", getDurationInMinutes());
     }
+
+    @Override
+    public String toString() {
+        return "Serie: " + this.getName() + " (" + this.getReleaseYear() + ")";
+    }
 }
