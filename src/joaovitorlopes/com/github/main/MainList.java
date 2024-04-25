@@ -4,9 +4,7 @@ import joaovitorlopes.com.github.models.Movie;
 import joaovitorlopes.com.github.models.Serie;
 import joaovitorlopes.com.github.models.Title;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.*;
 
 public class MainList {
     public static void main(String[] args) {
@@ -18,7 +16,7 @@ public class MainList {
         otherMovie.evaluate(9);
         Serie mySerie = new Serie("Fallout", 2024);
 
-        ArrayList<Title> list = new ArrayList<>();
+        List<Title> list = new LinkedList<>();
         list.add(m1);
         list.add(myMovie);
         list.add(otherMovie);
