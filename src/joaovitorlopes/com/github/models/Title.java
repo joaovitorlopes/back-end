@@ -21,7 +21,7 @@ public class Title implements Comparable<Title>{
             throw new ErrorYearConversionException("Failed to convert the Year");
         }
         this.releaseYear = Integer.valueOf(myTitleOmdb.year());
-        this.durationInMinutes = Integer.valueOf(myTitleOmdb.runtime().substring(0,3));
+        this.durationInMinutes = Integer.valueOf(myTitleOmdb.runtime().substring(0,2));
     }
 
     public int getTotalRating() {
@@ -83,8 +83,8 @@ public class Title implements Comparable<Title>{
 
     @Override
     public String toString() {
-        return "name='" + name + '\'' +
-                ", releaseYear=" + releaseYear +
-                ", durationInMinutes=" + durationInMinutes;
+        return "(name = '" + name + '\'' +
+                ", releaseYear = " + releaseYear +
+                ", durationInMinutes = " + durationInMinutes + ")";
     }
 }
