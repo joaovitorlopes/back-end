@@ -1,11 +1,9 @@
 package joaovitorlopes.com.github.models;
 
-import com.google.gson.annotations.SerializedName;
+import joaovitorlopes.com.github.exceptions.ErrorYearConversionException;
 
 public class Title implements Comparable<Title>{
-    @SerializedName("Title")
     private String name;
-    @SerializedName("Year")
     private int releaseYear;
     private int durationInMinutes;
     private  boolean includedInPlan;
@@ -19,8 +17,11 @@ public class Title implements Comparable<Title>{
 
     public Title(TitleOmdb myTitleOmdb) {
         this.name = myTitleOmdb.title();
+        if (myTitleOmdb.year().length() > 4) {
+            throw new ErrorYearConversionException("Failed to convert the Year");
+        }
         this.releaseYear = Integer.valueOf(myTitleOmdb.year());
-        this.durationInMinutes = Integer.valueOf(myTitleOmdb.runtime().substring(0,2));
+        this.durationInMinutes = Integer.valueOf(myTitleOmdb.runtime().substring(0,3));
     }
 
     public int getTotalRating() {
