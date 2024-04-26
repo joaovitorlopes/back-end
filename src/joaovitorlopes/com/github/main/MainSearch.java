@@ -1,8 +1,10 @@
 package joaovitorlopes.com.github.main;
 
+import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
-import joaovitorlopes.com.github.calculations.Sortable;
+import com.google.gson.GsonBuilder;
 import joaovitorlopes.com.github.models.Title;
+import joaovitorlopes.com.github.models.TitleOmdb;
 
 import java.io.IOException;
 import java.net.URI;
@@ -27,8 +29,16 @@ public class MainSearch {
         String json = response.body();
         System.out.println(json);
 
-        Gson gson = new Gson();
-        Title myTitle = gson.fromJson(json, Title.class);
-        System.out.println(myTitle);
+        Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).create();
+        TitleOmdb myTitleOmdb = gson.fromJson(json, TitleOmdb.class);
+        System.out.println(myTitleOmdb);
+        try {
+            Title myTitle = new Title(myTitleOmdb);
+            System.out.println("Title converted:");
+            System.out.println(myTitle);
+        } catch (NumberFormatException e) {
+            System.out.println("An error has occurred:");
+            System.out.println(e.getMessage());
+        }
     }
 }
